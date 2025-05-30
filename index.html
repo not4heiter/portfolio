@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <meta name="description" content="Жан Викмар — опытный лейтенант полиции, профессионал с безупречной репутацией и стальным характером. Его портфолио — это хроника раскрытых дел, жестких переговоров и непростых решений. Человек, который не терпит некомпетентности, но всегда прикроет своих.">
     
@@ -11,14 +12,20 @@
     <link rel="apple-touch-icon" sizes="180x180" href="my-favicon/apple-touch-icon.png">
     <link rel="manifest" href="my-favicon/site.webmanifest">
     
-    <link href="css/outlines.css" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> -->
+    
     <title>Портфолио Жана Викмара</title>
 </head>
 <body>
-    <div>
-        <header>
+    <div class="container">
+        <header class="main-header">
             <a><img src="img/main-logo.svg" alt="logo" width="60" height="60"></a>
-            <nav>
+            <nav class="main-nav">
                 <a href="#about">Обо мне</a>
                 <a href="#skills">Навыки</a>
                 <a href="#interest">Интересы</a>
@@ -26,13 +33,13 @@
             </nav>
         </header>
         <main>
-            <section>
+            <section class="me">
                 <h1>Жан Викмар</h1>
-                <p>Лейтенант Ревашольской Гражданской Милиции 41 участка</p>
-                <img src="img/user-photo.jpg" alt="Моё фото" width="400" height="400">
+                <p class="subtitle">Лейтенант Ревашольской Гражданской Милиции 41 участка</p>
+                <img src="img/user-photo.jpg" alt="Моё фото" width="400" height="400" class="my-photo">
             </section>
     
-            <section id="about">
+            <section id="about" class="about">
                 <h2>Пара слов обо мне</h2>
                 <p>Приветствую 😭</p>
                 <p>Меня зовут Жан Викмар. Я прослужил в полиции больше двадцати лет, и если вы ждёте красивых слов о «служении народу» — можете закрывать это портфолио прямо сейчас.
@@ -43,7 +50,7 @@
                     Но когда нужно решить дело — звонят мне. Потому что я не подвожу. И от других требую того же.</p>
             </section>
     
-            <section id="skills">
+            <section id="skills" class="skills">
                 <div>
                     <h2>Мои навыки</h2>
                     <div>
@@ -52,53 +59,53 @@
                         <button>по уровню</button>
                     </div>
                 </div>
-                <dl>
-                    <dt>html</dt>
-                    <dd>
+                <dl class="skill-list">
+                    <dt class="skill-item html">html</dt>
+                    <dd class="skill-level">
                         <div style="width: 30%;">25%</div>
                     </dd>
     
-                    <dt>css</dt>
-                    <dd>
+                    <dt class="skill-item css">css</dt>
+                    <dd class="skill-level">
                         <div style="width: 20%;">15%</div>
                     </dd>
     
-                    <dt>python</dt>
-                    <dd>
+                    <dt class="skill-item python">python</dt>
+                    <dd class="skill-level">
                         <div style="width: 50%;">50%</div>
                     </dd>
     
-                    <dt>c++</dt>
-                    <dd>
+                    <dt class="skill-item cpp">c++</dt>
+                    <dd class="skill-level">
                         <div style="width: 70%;">70%</div>
                     </dd>
                 </dl>
             </section>
     
-            <section id="interest">
+            <section id="interest" class="interest">
                 <h2>Мои интересы</h2>
                 <p>Кофе, порядок в отчётах и редкие моменты, когда всё идёт по плану. Ненавижу бардак — в делах и в головах.</p>
                 <p>Из приятного — классический джаз, крепкий табак и работа, сделанная на совесть. Всё остальное — лишние детали.</p>
             </section>
     
-            <section id="contacts">
+            <section id="contacts" class="contacts">
                 <h2>Мои контакты</h2>
-                <ul>
-                    <li><a href="tel:+78005553535">+7 800 555-35-35</a></li>
-                    <li><a href="mailto:email@mail.ru">email@mail.ru</a></li>
+                <ul class="contact-list">
+                    <li><a href="tel:+78005553535" class="contact-link phone">+7 800 555-35-35</a></li>
+                    <li><a href="mailto:email@mail.ru" class="contact-link email">email@mail.ru</a></li>
                 </ul>
-                <ul>
-                    <li><a href="">github</a></li>
-                    <li><a href="">gitlab</a></li>
-                    <li><a href="">x</a></li>
-                    <li><a href="">tg</a></li>
-                    <li><a href="">vk</a></li>
+                <ul class="social-list">
+                    <li><a href="" class="social-link github"> <span class="visually-hidden">github</span></a></li>
+                    <li><a href="" class="social-link gitlab"> <span class="visually-hidden">gitlab</span></a></li>
+                    <li><a href="" class="social-link x"> <span class="visually-hidden">x</span></a></li>
+                    <li><a href="" class="social-link telegram"> <span class="visually-hidden">tg</span></a></li>
+                    <li><a href="" class="social-link vk"> <span class="visually-hidden">vk</span></a></li>
                 </ul>
             </section>
-        </main>
+        </main> 
     </div>
-    <footer>
-        <div>
+    <footer class="main-footer">
+        <div class="container">
             <p>© 2025 Жан Викмар</p>
         </div>
     </footer>

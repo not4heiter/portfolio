@@ -1,0 +1,243 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/opensans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --txt-color: #212121;
+    --second-color: #09A494;
+    --bg-color: #FFFFFF;
+}
+
+body {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+}
+
+h1 {
+    font-family: Open Sans;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+h2 {
+    font-family: Open Sans;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+h3 {
+    font-family: Open Sans;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+button,
+a {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0;
+    transition: color 0.50s, background-color 0.50s;
+}
+
+button {
+    padding: 6px 10px 10px 10px;
+    border: 1px solid var(--second-color);
+    border-radius: 8px;
+    color: var(--second-color);
+    background-color: var(--bg-color);
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+button:hover{
+    background-color: var(--second-color);
+    color: var(--bg-color);
+}
+
+.main-footer {
+    color: var(--bg-color);
+    background-color: var(--txt-color);
+}
+
+.subtitle {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: var(--second-color);
+}
+
+.container {
+    min-width: 320px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--txt-color);
+}
+
+.main-nav a:hover {
+    color: var(--second-color);
+}
+
+.my-photo {
+    border-radius: 50%;
+}
+
+.skill-list {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.skill-list dt {
+    margin-bottom: 6px;
+    padding: 5px 0 5px 38px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 30px;
+}
+
+.skill-level {
+    margin: 4px 0 20px;
+    padding: 2px;
+    font-size: 0;
+    border: 1px solid var(--txt-color);
+    border-radius: 16px;
+}
+
+.skill-level div {
+    height: 14px;
+    background-color: var(--second-color);
+    border-radius: 8px;
+}
+
+.skill-item {
+    transform: lowercase;
+}
+
+.social-list,
+.contact-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.social-list li,
+.contact-list li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.html {
+    background-image: url("../img/skill=html.svg");
+}
+
+.css {
+    background-image: url("../img/skill=css.svg");
+}
+
+.cpp {
+    background-image: url("../img/skill=c++.svg");
+}
+
+.python {
+    background-image: url("../img/skill=python.svg");
+}
+
+.social-link {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--second-color);
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--bg-color);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-link:hover{
+    background-color: var(--second-color);
+}
+
+.github {
+    background-image: url(../img/social=github.svg);
+}
+
+.gitlab {
+    background-image: url(../img/social=gitlab.svg);
+}
+
+.x {
+    background-image: url(../img/X.svg);
+}
+
+.telegram {
+    background-image: url(../img/social=telegram.svg);
+}
+
+.vk {
+    background-image: url(../img/social=vk.svg);
+}
+
+.contact-link {
+    display: block;
+    text-decoration: none;
+    padding: 5px 0px 5px 42px;
+    color: var(--txt-color);
+    background-repeat: no-repeat;
+}
+
+.contact-link:hover {
+    color: var(--second-color)
+}
+
+.email {
+    background-image: url("../img/icon=emailBlack.svg");
+}
+
+.phone {
+    background-image: url("../img/icon=phoneBlack.svg");
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
