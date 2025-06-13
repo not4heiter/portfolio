@@ -15,6 +15,9 @@
     --bg-color: #FFFFFF;
 }
 
+a {display: inline-block}
+img {display: block}
+
 body {
     font-family: "Open Sans", "Arial", sans-serif;
     font-size: 20px;
@@ -39,6 +42,8 @@ h2 {
     font-size: 30px;
     line-height: 1.2;
     letter-spacing: 0;
+    margin: 0;
+    margin-bottom: 40px;
 }
 
 h3 {
@@ -70,9 +75,35 @@ button {
 
 }
 
-button:hover{
+button:hover {
     background-color: var(--second-color);
     color: var(--bg-color);
+}
+
+p {
+    margin: 0;
+}
+
+p + p {
+    margin-top: 15px;
+}
+
+section {
+    margin: 0;
+    margin-bottom: 120px;
+}
+
+.main-header {
+    display: flex;
+    padding-top: 60px;
+    gap: 40px;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 120px;
+}
+
+.main-header-wrap {
+    display: flex;
 }
 
 .main-footer {
@@ -96,8 +127,11 @@ button:hover{
     padding: 0 20px;
 }
 
+.main-nav {
+    display: flex;
+}
+
 .main-nav a {
-    display: inline-block;
     padding: 10px 15px;
     text-decoration: none;
     color: var(--txt-color);
@@ -107,8 +141,48 @@ button:hover{
     color: var(--second-color);
 }
 
+.me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.me h1 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    margin: 0;
+}
+
 .my-photo {
     border-radius: 50%;
+}
+
+.text-wrapper {
+    max-width: 800px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-header h2 {
+    margin-bottom: 0px;
+}
+
+.skill-header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .skill-list {
@@ -127,7 +201,7 @@ button:hover{
 
 .skill-level {
     margin: 4px 0 20px;
-    padding: 2px;
+    padding: 1px;
     font-size: 0;
     border: 1px solid var(--txt-color);
     border-radius: 16px;
@@ -147,7 +221,20 @@ button:hover{
 .contact-list {
     margin: 0;
     padding: 0;
-    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-list {
+    justify-content: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.social-list {
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 .social-list li,
@@ -227,6 +314,11 @@ button:hover{
 
 .phone {
     background-image: url("../img/icon=phoneBlack.svg");
+}
+
+.main-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .visually-hidden {
