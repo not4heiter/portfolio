@@ -24,7 +24,12 @@
 <body>
     <div class="container">
         <header class="main-header">
-            <a><img src="img/main-logo.svg" alt="logo" width="60" height="60"></a>
+            <div class="main-header-wrap">
+                <a><img src="img/main-logo.svg" alt="logo" width="60" height="60"></a>
+                <button class="nav-btn nav-btn_close">
+                    <span class="visually-hidden">Закрыть Меню</span>
+                </button>
+            </div>    
             <nav class="main-nav">
                 <a href="#about">Обо мне</a>
                 <a href="#skills">Навыки</a>
@@ -58,7 +63,7 @@
                 <div class="skill-header">
                     <h2>Мои навыки</h2>
                     <div>
-                        Сортировать
+                        <span>Сортировать</span>
                         <button>по названию</button>
                         <button>по уровню</button>
                     </div>

@@ -333,3 +333,207 @@ section {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+.nav-btn {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+
+    body{
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    section{
+        margin-bottom: 80px;
+    }
+
+    .main-header{
+        margin-bottom: 80px;
+    }
+
+    .subtitle {
+        font-size: 28px;
+    }
+
+    .me img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .skill-header h2 {
+        align-self: center;
+    }
+
+    .skill-list dt {
+        padding: 7px 0 7px 38px;
+    }
+
+    .contact-link {
+        padding: 7px 0px 7px 42px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    
+    body{
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+  
+    section{
+        margin-bottom: 50px;
+    }
+
+    .main-header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .main-header{
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav a{
+        padding: 20px 30px;
+    }
+
+    .nav-btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: 0;
+        padding: 0;
+    }
+
+    .nav-btn_close {
+        background-image: url("../img/btn=close.svg");;
+    }
+
+    .nav-btn_open {
+        background-image: url("../img/btn=burger.svg");;
+    }
+
+    .main-header-wrap{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .me{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .me h1{
+        margin-bottom: 10px;
+    }
+
+    .me img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .me div{
+        text-align: center;
+    }
+
+    .skill-header{
+        margin-bottom: 30px;
+    }
+
+    .skill-list dt {
+        padding: 8px 0 8px 38px;
+    }
+
+    .contact-list {
+        margin-bottom: 20px;
+    }
+
+    .contact-link {
+        padding: 8px 0px 8px 42px;
+    }
+
+    .social-list{
+        gap: 15px;
+    }
+
+    .main-footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+    
+    .skill-header{
+        flex-direction: column;
+    }
+
+    .skill-header div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .skill-header button {
+        width: 100%;
+    }
+
+    .skill-header h2 {
+        align-self:flex-start;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+   
+    .contact-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .social-list {
+        gap: 15px;
+    }
+
+}
