@@ -57,11 +57,9 @@ h3 {
 button,
 a {
     font-family: Open Sans;
-    font-weight: 400;
-    font-size: 20px;
     line-height: 1;
     letter-spacing: 0;
-    transition: color 0.50s, background-color 0.50s;
+    transition: color 0.45s, background-color 0.45s;
 }
 
 button {
