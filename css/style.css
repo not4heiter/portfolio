@@ -242,7 +242,7 @@ section {
     padding: 0;
 }
 
-.html {
+/*.html {
     background-image: url("../img/skill=html.svg");
 }
 
@@ -256,7 +256,7 @@ section {
 
 .python {
     background-image: url("../img/skill=python.svg");
-}
+}*/
 
 .social-link {
     display: block;
