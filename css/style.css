@@ -425,6 +425,10 @@ section {
         text-align: center;
     }
 
+    .main-nav_closed{
+        display: none;
+    }
+
     .main-nav a{
         padding: 20px 30px;
     }
@@ -438,11 +442,11 @@ section {
     }
 
     .nav-btn_close {
-        background-image: url("../img/btn=close.svg");;
+        background-image: url('../img/btn=close.svg');
     }
 
     .nav-btn_open {
-        background-image: url("../img/btn=burger.svg");;
+        background-image: url('../img/btn=burger.svg');
     }
 
     .main-header-wrap{

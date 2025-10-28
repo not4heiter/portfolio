@@ -14,12 +14,9 @@
     
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> -->
     
     <title>Портфолио Жана Викмара</title>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -30,7 +27,7 @@
                     <span class="visually-hidden">Закрыть Меню</span>
                 </button>
             </div>    
-            <nav class="main-nav">
+            <nav>
                 <a href="#about">Обо мне</a>
                 <a href="#skills">Навыки</a>
                 <a href="#interest">Интересы</a>
@@ -64,31 +61,10 @@
                     <h2>Мои навыки</h2>
                     <div>
                         <span>Сортировать</span>
-                        <button>по названию</button>
-                        <button>по уровню</button>
+                        <button data-type="skillName">по названию</button>
+                        <button data-type="value">по уровню</button>
                     </div>
                 </div>
-                <!--<dl class="skill-list">
-                    <dt class="skill-item html">html</dt>
-                    <dd class="skill-level">
-                        <div style="width: 30%;">25%</div>
-                    </dd>
-    
-                    <dt class="skill-item css">css</dt>
-                    <dd class="skill-level">
-                        <div style="width: 20%;">15%</div>
-                    </dd>
-    
-                    <dt class="skill-item python">python</dt>
-                    <dd class="skill-level">
-                        <div style="width: 50%;">50%</div>
-                    </dd>
-    
-                    <dt class="skill-item cpp">c++</dt>
-                    <dd class="skill-level">
-                        <div style="width: 70%;">70%</div>
-                    </dd>
-                </dl>-->
                 <dl class="skill-list"></dl>
             </section>
     
@@ -121,6 +97,5 @@
             <p>© 2025 Жан Викмар</p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>
