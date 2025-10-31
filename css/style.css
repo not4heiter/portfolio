@@ -333,7 +333,18 @@ section {
 }
 
 .nav-btn {
-    display: none;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: none;
+    background-color: transparent !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 0 !important;
 }
 
 @media screen and (max-width: 1024px) {
@@ -439,6 +450,12 @@ section {
         height: 30px;
         border: 0;
         padding: 0;
+        outline: none;
+    }
+
+    .nav-btn:hover {
+        background-color: transparent !important;
+        transform: none !important;
     }
 
     .nav-btn_close {

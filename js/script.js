@@ -84,30 +84,36 @@ function getComparer(prop) {
     }
 }
 
-const nav = document.querySelector('nav');
+const nav = document.querySelector('.main-nav');
 const menuSwitch = document.querySelector('.nav-btn');
-const menuSwitchText = document.querySelector('.nav-btn .visually-hidden')
+const menuSwitchText = document.querySelector('.nav-btn .visually-hidden');
+
 const menu = {
     close() {
         nav.classList.add('main-nav_closed');
         menuSwitch.classList.remove('nav-btn_close');
         menuSwitch.classList.add('nav-btn_open');
-        menuSwitchText.textContent = 'Открыть меню';
+        if (menuSwitchText) {
+            menuSwitchText.textContent = 'Открыть меню';
+        }
     },
     open() {
         nav.classList.remove('main-nav_closed');
         menuSwitch.classList.remove('nav-btn_open');
         menuSwitch.classList.add('nav-btn_close');
-        menuSwitchText.textContent = 'Закрыть меню';
+        if (menuSwitchText) {
+            menuSwitchText.textContent = 'Закрыть меню';
+        }
     }
 };
 
-menuSwitch.addEventListener('click', (e) => {
-    if (e.target.classList.contains('nav-btn_open')) {
+menuSwitch.addEventListener('click', () => {
+    if (menuSwitch.classList.contains('nav-btn_open')) {
         menu.open();
     } else {
         menu.close();
     }
 });
 
+// Инициализация - меню должно быть закрыто при загрузке
 menu.close();
