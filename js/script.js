@@ -84,6 +84,28 @@ function getComparer(prop) {
     }
 }
 
+const themeCheckbox = document.querySelector('.switch-checkbox')
+
+if (localStorage.getItem("darkTheme")) {
+    if (localStorage.getItem("darkTheme") === "true") {
+        themeCheckbox.checked = true;
+        document.querySelector('body').classList.add('dark-theme');
+    } else {
+        themeCheckbox.checked = false;
+        document.querySelector('body').classList.remove('dark-theme');
+    }
+}
+
+themeCheckbox.addEventListener('change', () => {
+    if (themeCheckbox.checked) {
+        document.querySelector('body').classList.add('dark-theme');
+    }
+    else{
+        document.querySelector('body').classList.remove('dark-theme');
+    }
+    localStorage.setItem("darkTheme", themeCheckbox.checked);
+})
+
 const nav = document.querySelector('.main-nav');
 const menuSwitch = document.querySelector('.nav-btn');
 const menuSwitchText = document.querySelector('.nav-btn .visually-hidden');
@@ -115,5 +137,4 @@ menuSwitch.addEventListener('click', () => {
     }
 });
 
-// Инициализация - меню должно быть закрыто при загрузке
 menu.close();

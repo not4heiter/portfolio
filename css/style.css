@@ -28,6 +28,11 @@ body {
     background-color: var(--bg-color);
 }
 
+.dark-theme {
+    --txt-color: #CCCCCC;
+    --bg-color: #031923;
+}
+
 h1 {
     font-family: Open Sans;
     font-weight: 700;
@@ -102,6 +107,11 @@ section {
 
 .main-header-wrap {
     display: flex;
+    transition: filter 0.3s ease;
+}
+
+body.dark-theme .main-header-wrap img {
+    filter: brightness(0) invert(1);
 }
 
 .main-footer {
@@ -242,21 +252,56 @@ section {
     padding: 0;
 }
 
-/*.html {
-    background-image: url("../img/skill=html.svg");
+.switch {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 34px;
 }
-
-.css {
-    background-image: url("../img/skill=css.svg");
+.switch-checkbox {
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
-
-.cpp {
-    background-image: url("../img/skill=c++.svg");
+.switch-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: #CCCCCC;
+    cursor: pointer;
+    transition: 0.4s;
 }
-
-.python {
-    background-image: url("../img/skill=python.svg");
-}*/
+.switch-slider:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    bottom: 0;
+    height: 40px;
+    width: 40px;
+    margin: auto 0;
+    border: 1px solid #CCCCCC;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    background-image: url('../img/dark-theme/sun.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    transition: 0.4s;
+}
+.switch-checkbox:checked + .switch-slider:before {
+    transform: translateX(24px);
+    background-color: #FFFFFF;
+    background-image: url('../img/dark-theme/moon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+}
 
 .social-link {
     display: block;
@@ -272,6 +317,10 @@ section {
 
 .social-link:hover{
     background-color: var(--second-color);
+}
+
+.dark-theme .social-link {
+    background-color: #CCCCCC;
 }
 
 .github {
@@ -314,9 +363,21 @@ section {
     background-image: url("../img/icon=phoneBlack.svg");
 }
 
+.dark-theme .email {
+    background-image: url("../img/dark-theme/icon=email.svg");
+}
+
+.dark-theme .phone {
+    background-image: url("../img/dark-theme/icon=phone.svg");
+}
+
 .main-footer {
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.dark-theme .main-footer {
+    background-color: #09A494;
 }
 
 .visually-hidden {
@@ -345,6 +406,12 @@ section {
     background-position: center;
     background-size: contain;
     border-radius: 0 !important;
+}
+
+@media screen and (min-width: 1025px) {
+    .nav-btn {
+        display: none !important;
+    }
 }
 
 @media screen and (max-width: 1024px) {
