@@ -1,0 +1,8 @@
+{
+    "data" : [
+        {"skillName": "html",     "value": 50,  "icon": "html.svg"},
+        {"skillName": "css",      "value": 40,  "icon": "css.svg"},
+        {"skillName": "python",   "value": 30,  "icon": "python.svg"},
+        {"skillName": "cpp",      "value": 60,  "icon": "c++.svg"}
+    ]
+}

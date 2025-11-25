@@ -13,6 +13,7 @@
     --txt-color: #212121;
     --second-color: #09A494;
     --bg-color: #FFFFFF;
+    --error-color: #ff3333;
 }
 
 a {display: inline-block}
@@ -408,6 +409,11 @@ body.dark-theme .main-header-wrap img {
     border-radius: 0 !important;
 }
 
+.skill-error {
+    color: var(--error-color);
+    
+}
+
 @media screen and (min-width: 1025px) {
     .nav-btn {
         display: none !important;
@@ -622,4 +628,8 @@ body.dark-theme .main-header-wrap img {
         gap: 15px;
     }
 
+}
+
+.hidden{
+    display: none !important;
 }

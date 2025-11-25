@@ -1,14 +1,28 @@
+const skillErrorBlock = document.querySelector('.skill-error')
+const skillUpload = document.querySelector('.skill-upload')
+
 const skills = {
-    data : [
-        {skillName: 'html',     value: 30,  icon: 'html.svg'},
-        {skillName: 'css',      value: 20,  icon: 'css.svg'},
-        {skillName: 'python',   value: 50,  icon: 'c++.svg'},
-        {skillName: 'cpp',      value: 70,  icon: 'python.svg'}
-    ],
+    data : [],
 
     sortMode: null,
 
-    generateList(skillList){
+    async getData(){
+        await fetch('db/skills.json')
+            .then(data => data.json())
+            .then(object => this.data = [...object['data']])
+            .catch(e => console.log("Skills load error"));
+    },
+
+     async generateList(skillList){
+        if (this.data.length == 0) {
+            await this.getData();
+            if (this.data.length == 0) {
+                skillErrorBlock.classList.remove('hidden')
+                sortBlock.classList.add('hidden')
+                return;
+            }
+        }
+
         skillList.innerHTML = '';
         this.data.forEach(skillData => {
             const nameElement = document.createElement('dt');
@@ -42,6 +56,12 @@ const skills = {
 
 const skillList = document.querySelector('.skill-list')
 skills.generateList(skillList)
+
+skillUpload.addEventListener('click', () => {
+    skillErrorBlock.classList.add('hidden')
+    sortBlock.classList.remove('hidden')
+    skills.generateList(skillList);
+})
 
 const sortBtnsBlock = document.querySelector('.skill-header');
 sortBtnsBlock.addEventListener('click', (e) => {
