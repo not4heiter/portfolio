@@ -324,6 +324,10 @@ body.dark-theme .main-header-wrap img {
     background-color: #CCCCCC;
 }
 
+.dark-theme .social-link:hover{
+    background-color: var(--second-color);
+}
+
 .github {
     background-image: url(../img/social=github.svg);
 }
